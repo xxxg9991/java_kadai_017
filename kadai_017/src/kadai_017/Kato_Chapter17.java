@@ -4,24 +4,25 @@ public abstract class Kato_Chapter17 {
     public String familyName;
     public String givenName;
     public String address;
-    //フィールドをコンストラクタ
+    //コンストラクタ・初期化
     public Kato_Chapter17(String familyName, String givenName, String address) {
         this.familyName = familyName;
         this.givenName  = givenName;
         this.address    = address;
     }
-
-    //ここでメソッドを定義（作成）
-    //１．共通の紹介メソッド
-    public void commonIntroduce() {
-        System.out.println("私の名前は" + familyName + givenName + "です");;
+    //親クラス持つメソッド
+    //①共通の紹介
+    public void commonIntroduce () {
+        System.out.println("名前は" + familyName);
     }
-    //個別の具体的な紹介の為の抽象メソッド（abstract=抽象メソッドになる）
-    public abstract void eachIntroduce();
-    //自己紹介実行メソッド（execIntroduce=実行するためのメソッド名）
+    public abstract void eachIntroduce (); //ここは修飾子abstractを使うので抽象メソッドを定義
+    //各紹介の出力メソッドを実行
     public void execIntroduce() {
         commonIntroduce();
         eachIntroduce();
-    }//ブロック内に実行したいメソッドを入力することで実行可能となる
+    }
+    //setGivenNameオーバーライドメソッド
+    public void setGivenName(String givenName) {
+        this.givenName = givenName;
+    }
 }
-
