@@ -1,31 +1,19 @@
 package kadai_017;
 public class KatoExce_Chapter17 {
     public static void main(String[] args) {
-        KatoTaro_Chapter17 taro = new KatoTaro_Chapter17("加藤", "太郎", "東京都中野区") {
-            @Override
-            public void eachIntroduce() {
-                super.eachIntroduce();
-            }
-        };
-        taro.setGivenName("太郎");
-        taro.eachIntroduce();
+        KatoTaro_Chapter17  taro    = new KatoTaro_Chapter17();
+        KatoIchiro_Chapter17 ichiro = new KatoIchiro_Chapter17();
+        KatoHanako_Chapter17 hanako = new KatoHanako_Chapter17();
 
-        KatoIchiro_Chapter17 ichiro = new KatoIchiro_Chapter17("加藤", "一郎", "東京都中野区") {
-            @Override
-            public void eachIntroduce() {
-                super.eachIntroduce();
-            }
-        };
-        ichiro.setGivenName("一郎");
-        ichiro.eachIntroduce();
+        System.out.println("加藤太郎の紹介");
+        taro.exceIntroduce();
+        System.out.println();
 
-        KatoHanako_Chapter17 hanako = new KatoHanako_Chapter17("加藤", "花子", "1東京都中野区") {
-            @Override
-            public void eachIntroduce() {
-                super.eachIntroduce();
-            }
-        };
-        hanako.setGivenName("花子");
-        hanako.eachIntroduce();
-        }
-            }
+        System.out.println("加藤一郎の紹介");
+        ichiro.exceIntroduce();
+        System.out.println();
+
+        System.out.println("加藤花子の紹介");
+        hanako.exceIntroduce();
+    }
+}
