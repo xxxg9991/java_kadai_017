@@ -16,7 +16,11 @@ package kadai_017;//メソッドを定義するためのクラス
             System.out.println("名前は" + familyName + givenName + "です");
             System.out.println("住所は" + address + "です");
         }
-       //個別の紹介を実行する抽象メソッド
+
+        //引数なしのsetGivenNameメソッド
+        public abstract void setGivenName();
+
+        //個別の紹介を実行する抽象メソッド
         abstract public void eachIntroduce();
 
         //紹介を実行するメソッド
@@ -24,5 +28,9 @@ package kadai_017;//メソッドを定義するためのクラス
             commonIntroduce();
             eachIntroduce();
     }
+    //setGivenNameメソッドをオーバーライド可能にする
+        public void setGivenName(String givenName) {
+            this.givenName = givenName;
+        }
 }
 
