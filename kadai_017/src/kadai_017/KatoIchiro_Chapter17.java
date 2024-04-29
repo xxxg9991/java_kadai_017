@@ -5,9 +5,10 @@ class KatoIchiro_Chapter17 extends Kato_Chapter17 {
     }
 
     //引数なしのsetGivenNameメソッド
+    //引数なしのsetGivenNameメソッド
     @Override
     public void setGivenName() {
-        givenName = "一郎";
+        this.givenName = "一郎";
     }
 
     //個別の紹介を出力するメソッドの実装

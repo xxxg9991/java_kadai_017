@@ -7,10 +7,10 @@ package kadai_017;
         //引数なしのsetGivenNameメソッド
         @Override
         public void setGivenName() {
-            givenName = "太郎";
+            this.givenName = "太郎";
         }
 
-            //個別の紹介を出力するメソッドの実装
+        //個別の紹介を出力するメソッドの実装
             @Override
             public void eachIntroduce() {
                 System.out.println("私はJavaが得意です");
