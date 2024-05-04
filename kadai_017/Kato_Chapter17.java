@@ -1,24 +1,24 @@
 package kadai_017;
+ abstract public class Kato_Chapter17 {
+     //フィールドセット
+     public String familyName = "加藤";
+     public String givenName;
+     public String address = "東京都中野区〇×";
 
-//抽象親クラス
-abstract public class Kato_Chapter17 {
-    //姓フィールド
-    public String familyName ="加藤";
-    //名フィールド
-    public String givenName = "";
-    //住所フィールド
-    public String address = "東京都中野区〇×";
+     //共通紹介メソッド
+     public void commonIntroduce() {
+         System.out.println("名前は" + familyName + givenName + "です");
+         System.out.println("住所は" + address + "です");
+     }
 
-    //共通の紹介を出力するメソッド
-    public void commonIntroduce() {
-        System.out.println(familyName);
-    }
+     //個別紹介をする抽象メソッド
+     abstract public void eachIntroduce();
 
-    //個別の紹介を出力するメソッド
-    abstract public void eachIntroduce();
-
-    //紹介を実行する
-    public void execIntroduce() {
-    }
+     //紹介を実行するメソッド
+     public void execIntrosuce() {
+         commonIntroduce();
+         eachIntroduce();
+     }
 
 }
+

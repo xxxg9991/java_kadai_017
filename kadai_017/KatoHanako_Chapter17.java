@@ -1,20 +1,20 @@
 package kadai_017;
 
+// 加藤花子を表すクラス
 public class KatoHanako_Chapter17 extends Kato_Chapter17 {
-      String hanakoIntroduce = "";
-      public void setGivenName(String name) {
-        givenName = name;
+    public KatoHanako_Chapter17() {
+        setGivenName(); // 引数なしで呼び出し
     }
 
-    public void execIntroduce() {
-        System.out.println("名前は"+ familyName + givenName + "です");
-        System.out.println("住所は"+ address + "です");
-        eachIntroduce();
-        System.out.println(hanakoIntroduce);
+    // 名を表すフィールドの値をセットするメソッド
+    public void setGivenName() {
+        givenName = "花子";
     }
 
+    // 個別紹介をするメソッドの実装
+    @Override
     public void eachIntroduce() {
-        hanakoIntroduce = "趣味は読書です";
+        System.out.println("趣味は読書です");
     }
-
 }
+

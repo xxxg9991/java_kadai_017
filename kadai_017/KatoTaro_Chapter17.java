@@ -1,23 +1,21 @@
 package kadai_017;
 
-//子クラス　加藤太郎を表す
-public class KatoTaro_Chapter17 extends Kato_Chapter17{
-
-    String taroIntroduce = "";
-
-    public void setGivenName(String name) {
-        givenName = name;
+// 加藤一郎を表すクラス
+public class KatoTaro_Chapter17 extends Kato_Chapter17 {
+    public KatoTaro_Chapter17() {
+        setGivenName(); // 引数なしで呼び出し
     }
 
-    public void execIntroduce() {
-        System.out.println("名前は"+ familyName + givenName + "です");
-        System.out.println("住所は"+ address + "です");
-        eachIntroduce();
-        System.out.println(taroIntroduce);
+    // 名を表すフィールドの値をセットするメソッド
+    public void setGivenName() {
+        givenName = "太郎";
     }
 
+    // 個別紹介をするメソッドの実装
+    @Override
     public void eachIntroduce() {
-        taroIntroduce = "Javaが得意です";
+        System.out.println("Javaが得意です");
     }
-
 }
+
+
